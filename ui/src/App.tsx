@@ -17,7 +17,7 @@ const App = () => {
           whileHover={{ scale: 1.1 }}
         >
           <div className="header-logo"></div>
-          <div className="header-name">Name</div>
+          <div className="header-name">Y Consultator</div>
         </motion.a>
         <motion.a
           className="coming-soon"
