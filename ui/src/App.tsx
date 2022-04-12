@@ -34,7 +34,7 @@ const App = () => {
         <motion.h3
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
         >
           Are you an academic interested in exploring microconsulting
           opportunities?
@@ -42,7 +42,7 @@ const App = () => {
         <motion.h3
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.1 }}
+          transition={{ duration: 1.5 }}
         >
           Are you a business looking to leverage world-leading academic
           expertise?
@@ -51,7 +51,7 @@ const App = () => {
           className="main-button"
           href="/"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1.4 } }}
+          animate={{ opacity: 1, transition: { duration: 2 } }}
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.3 },
