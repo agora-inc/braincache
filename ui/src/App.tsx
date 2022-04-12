@@ -19,7 +19,11 @@ const App = () => {
           <div className="header-logo"></div>
           <div className="header-name">Name</div>
         </motion.a>
-        <motion.a className="coming-soon" href="/" whileHover={{ scale: 1.1 }}>
+        <motion.a
+          className="coming-soon"
+          href="https://airtable.com/shrhGt0giRGAY3yxA"
+          whileHover={{ scale: 1.1 }}
+        >
           Coming soon
         </motion.a>
       </header>
@@ -49,7 +53,7 @@ const App = () => {
         </motion.h3>
         <motion.a
           className="main-button"
-          href="/"
+          href="https://airtable.com/shrhGt0giRGAY3yxA"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 2 } }}
           whileHover={{
