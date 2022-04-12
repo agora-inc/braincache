@@ -8,8 +8,8 @@ TimeoutSec=900
 ExecStartPre=/bin/sh -c 'cd ui && rm -rf dist && rm -rf build'
 ExecStartPre=/bin/sh -c 'cd ui && yarn build && mv build dist'
 ExecStartPre=/bin/sh -c 'cd server && /usr/local/go/bin/go build'
-ExecStart=/home/pi/code/products.gallery/server/server
-WorkingDirectory=/home/pi/code/products.gallery/
+ExecStart=/home/pi/code/mucon/server/server
+WorkingDirectory=/home/pi/code/mucon/
 
 [Install]
 WantedBy=multi-user.target
