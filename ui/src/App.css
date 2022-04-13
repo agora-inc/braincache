@@ -32,14 +32,26 @@ a {
   height: 32px;
   width: 32px;
   border-radius: 16px;
-  background-color: #007458;
+  /* background-color: #007458; */
+  background-color: rgb(2, 2, 173);
+}
+
+.header-logo.mobile {
+  height: 26px;
+  width: 26px;
 }
 
 .header-name {
-  color: #007458;
+  /* color: #007458; */
+  color: rgb(2, 2, 173);
   font-size: 24px;
   margin-left: 5px;
   font-weight: bold;
+}
+
+.header-name.mobile {
+  font-size: 21px;
+  font-weight: normal;
 }
 
 .coming-soon {
@@ -50,32 +62,52 @@ a {
   border-radius: 20px;
 }
 
+.coming-soon.mobile {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
 .main-content {
-  width: 40%;
-  min-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  width: 40%;
+  min-width: 500px;
+  /* margin-bottom: 50px; */
 }
 
-h1 {
-  /* color: #007458; */
+.main-content.mobile {
+  width: 85%;
+  min-width: 100px;
+}
+
+.main-text {
   color: rgb(2, 2, 173);
-  font-size: 44px;
-  line-height: 40px;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 50px;
+  font-size: 44px;
+  line-height: 42px;
 }
 
-h3 {
-  color: #8b8b8b;
+.main-text.mobile {
+  margin-bottom: 30px;
   font-size: 28px;
-  line-height: 27px;
+  line-height: 26px;
+}
+
+.secondary-text {
+  color: #8b8b8b;
   font-weight: normal;
-  width: 90%;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 25px;
+  font-size: 28px;
+  line-height: 26px;
+}
+
+.secondary-text.mobile {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 16px;
 }
 
 .main-button {
@@ -86,10 +118,17 @@ h3 {
     rgba(237, 128, 255, 0.14) 52.58%,
     rgba(255, 68, 113, 0.3) 97.51%
   );
-  color: #007458;
+  /* color: #007458; */
+  color: rgb(2, 2, 173);
   font-size: 26px;
   padding: 10px 30px;
   border-radius: 40px;
   font-weight: 550;
   margin-top: 30px;
+}
+
+.main-button.mobile {
+  font-size: 20px;
+  padding: 8px 26px;
+  margin-top: 20px;
 }

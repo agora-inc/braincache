@@ -1,8 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+
+import { useMediaQuery } from "./useMediaQuery";
+import { ReactComponent as Logo } from "./logo.svg";
 import "./App.css";
 
 const App = () => {
+  const onMobile = useMediaQuery("(max-width: 600px)");
+
+  const classname = (name: string): string => {
+    return `${name}${onMobile ? " mobile" : ""}`;
+  };
+
   return (
     <motion.div
       className="App"
@@ -16,26 +25,33 @@ const App = () => {
           href="/"
           whileHover={{ scale: 1.1 }}
         >
-          <div className="header-logo"></div>
-          <div className="header-name">Y Consultator</div>
+          <Logo className={classname("header-logo")} />
+          <div className={classname("header-name")}>Y Consultator</div>
         </motion.a>
         <motion.a
-          className="coming-soon"
+          className={classname("coming-soon")}
           href="https://airtable.com/shrhGt0giRGAY3yxA"
           whileHover={{ scale: 1.1 }}
         >
           Coming soon
         </motion.a>
       </header>
-      <div className="main-content">
+      <div className={classname("main-content")}>
         <motion.h1
+          className={classname("main-text")}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          style={{
+            marginBottom: onMobile ? 30 : 50,
+            fontSize: onMobile ? 28 : 44,
+            lineHeight: onMobile ? "26px" : "42px",
+          }}
         >
           Connecting high-impact businesses to relevant experts in academia
         </motion.h1>
         <motion.h3
+          className={classname("secondary-text")}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -44,6 +60,7 @@ const App = () => {
           opportunities?
         </motion.h3>
         <motion.h3
+          className={classname("secondary-text")}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
@@ -52,10 +69,13 @@ const App = () => {
           expertise?
         </motion.h3>
         <motion.a
-          className="main-button"
+          className={classname("main-button")}
           href="https://airtable.com/shrhGt0giRGAY3yxA"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 2 } }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 2 },
+          }}
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.3 },
