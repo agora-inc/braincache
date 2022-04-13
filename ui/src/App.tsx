@@ -23,7 +23,8 @@ const App = () => {
         <motion.a
           className="logo-and-name"
           href="/"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.06 }}
+          whileTap={{ scale: 0.95 }}
         >
           <Logo className={classname("header-logo")} />
           <div className={classname("header-name")}>Y Consultator</div>
@@ -31,7 +32,8 @@ const App = () => {
         <motion.a
           className={classname("coming-soon")}
           href="https://airtable.com/shrhGt0giRGAY3yxA"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.06 }}
+          whileTap={{ scale: 0.95 }}
         >
           Coming soon
         </motion.a>
@@ -77,9 +79,10 @@ const App = () => {
             transition: { duration: 2 },
           }}
           whileHover={{
-            scale: 1.1,
+            scale: 1.06,
             transition: { duration: 0.3 },
           }}
+          whileTap={{ scale: 0.95 }}
         >
           Join the waitlist →
         </motion.a>
