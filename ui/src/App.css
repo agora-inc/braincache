@@ -29,11 +29,9 @@ a {
 }
 
 .header-logo {
-  height: 32px;
-  width: 32px;
+  height: 36px;
+  width: 36px;
   border-radius: 16px;
-  /* background-color: #007458; */
-  background-color: rgb(2, 2, 173);
 }
 
 .header-logo.mobile {

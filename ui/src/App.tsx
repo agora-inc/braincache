@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 import { useMediaQuery } from "./useMediaQuery";
@@ -27,7 +27,7 @@ const App = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Logo className={classname("header-logo")} />
-          <div className={classname("header-name")}>Y Consultator</div>
+          <div className={classname("header-name")}>Braincache</div>
         </motion.a>
         <motion.a
           className={classname("coming-soon")}
