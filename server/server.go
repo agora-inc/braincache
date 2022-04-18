@@ -57,6 +57,7 @@ func (s *Server) registerRoutes() {
 
 	// routes for serving ui
 	s.Router.PathPrefix("/static").Handler(http.FileServer(http.Dir(distPath)))
+	s.Router.PathPrefix("/images").Handler(http.FileServer(http.Dir(distPath)))
 	s.Router.HandleFunc("/logo.png", fileHandler(logoPath))
 	s.Router.HandleFunc("/favicon.ico", fileHandler(faviconPath))
 	s.Router.PathPrefix("/").HandlerFunc(fileHandler(indexPath))

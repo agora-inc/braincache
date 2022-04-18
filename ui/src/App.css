@@ -2,9 +2,13 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: left;
+  background-image: url("http://localhost:8005/images/background.png");
+  background-size: 2235px 1177px;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -40,8 +44,8 @@ a {
 }
 
 .header-name {
-  /* color: #007458; */
-  color: rgb(2, 2, 173);
+  /* color: rgb(2, 2, 173); */
+  color: white;
   font-size: 24px;
   margin-left: 5px;
   font-weight: bold;
@@ -54,8 +58,8 @@ a {
 
 .coming-soon {
   margin: 20px;
-  color: #5c5c5c;
-  background-color: #e5e5e5;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 7px 12px;
   border-radius: 20px;
 }
@@ -68,65 +72,64 @@ a {
 .main-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 40%;
+  width: 45%;
   min-width: 500px;
-  /* margin-bottom: 50px; */
+  margin: 80px;
 }
 
 .main-content.mobile {
-  width: 85%;
+  width: 75%;
   min-width: 100px;
+  margin: 30px;
 }
 
 .main-text {
-  color: rgb(2, 2, 173);
+  /* color: rgb(2, 2, 173); */
+  color: white;
   margin: 0;
-  margin-bottom: 50px;
-  font-size: 44px;
-  line-height: 42px;
+  margin-bottom: 40px;
+  font-size: 54px;
+  line-height: 46px;
 }
 
 .main-text.mobile {
   margin-bottom: 30px;
-  font-size: 28px;
-  line-height: 26px;
+  font-size: 36px;
+  line-height: 32px;
 }
 
 .secondary-text {
-  color: #8b8b8b;
+  width: 80%;
+  color: white;
   font-weight: normal;
   margin: 0;
   margin-bottom: 25px;
+  margin-top: 0;
   font-size: 28px;
   line-height: 26px;
 }
 
 .secondary-text.mobile {
+  width: 100%;
   margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 16px;
+  font-size: 22px;
+  line-height: 19px;
 }
 
 .main-button {
-  /* background-color: #b4f3dd; */
-  background: linear-gradient(
-    91.01deg,
-    #7cffd12c 0.41%,
-    rgba(211, 137, 224, 0.15) 52.58%,
-    rgba(255, 78, 119, 0.15) 97.51%
-  );
-  /* color: #007458; */
-  color: rgb(2, 2, 173);
+  width: fit-content;
+  /* background-color: rgb(2, 2, 173); */
+  background: white;
+  color: black;
   font-size: 26px;
   padding: 10px 30px;
   border-radius: 40px;
-  font-weight: 550;
-  margin-top: 30px;
+  font-weight: 800;
+  margin-top: 50px;
 }
 
 .main-button.mobile {
   font-size: 20px;
   padding: 8px 26px;
-  margin-top: 20px;
+  margin-top: 60px;
 }

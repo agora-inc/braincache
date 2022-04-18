@@ -32,6 +32,7 @@ const App = () => {
         <motion.a
           className={classname("coming-soon")}
           href="https://airtable.com/shrhGt0giRGAY3yxA"
+          animate={{ rotate: "2deg" }}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -44,18 +45,18 @@ const App = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          style={{
-            marginBottom: onMobile ? 30 : 50,
-            fontSize: onMobile ? 28 : 44,
-            lineHeight: onMobile ? "26px" : "42px",
-          }}
+          // style={{
+          //   marginBottom: onMobile ? 30 : 50,
+          //   fontSize: onMobile ? 28 : 54,
+          //   lineHeight: onMobile ? "26px" : "50px",
+          // }}
         >
           Connecting high-impact businesses to relevant experts in academia
         </motion.h1>
         <motion.h3
           className={classname("secondary-text")}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 0.6 }}
           transition={{ duration: 1 }}
         >
           Are you an academic interested in exploring microconsulting
@@ -64,7 +65,7 @@ const App = () => {
         <motion.h3
           className={classname("secondary-text")}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 0.6 }}
           transition={{ duration: 1.5 }}
         >
           Are you a business looking to leverage world-leading academic
@@ -73,9 +74,10 @@ const App = () => {
         <motion.a
           className={classname("main-button")}
           href="https://airtable.com/shrhGt0giRGAY3yxA"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, rotate: "-1deg" }}
           animate={{
             opacity: 1,
+            rotate: "-3deg",
             transition: { duration: 2 },
           }}
           whileHover={{
