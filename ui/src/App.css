@@ -11,6 +11,11 @@
   background-repeat: no-repeat;
 }
 
+.App.mobile {
+  background-color: black;
+  background-size: cover;
+}
+
 a {
   text-decoration: none;
 }
@@ -125,11 +130,11 @@ a {
   padding: 10px 30px;
   border-radius: 40px;
   font-weight: 800;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .main-button.mobile {
   font-size: 20px;
   padding: 8px 26px;
-  margin-top: 60px;
+  margin-top: 30px;
 }

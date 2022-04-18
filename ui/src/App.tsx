@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <motion.div
-      className="App"
+      className={classname("App")}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
