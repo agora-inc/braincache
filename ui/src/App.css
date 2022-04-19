@@ -5,14 +5,14 @@
   align-items: flex-start;
   justify-content: flex-end;
   text-align: left;
-  background-image: url("http://localhost:8005/images/background.png");
+  background-color: black;
+  background-image: url("http://braincache.club/images/background-2.png");
   background-size: 2235px 1177px;
   background-position: top center;
   background-repeat: no-repeat;
 }
 
 .App.mobile {
-  background-color: black;
   background-size: cover;
 }
 
