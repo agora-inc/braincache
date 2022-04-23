@@ -1,4 +1,4 @@
-module mucon
+module braincache
 
 go 1.16
 
