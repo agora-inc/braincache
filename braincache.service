@@ -1,5 +1,5 @@
 [Unit]
-Description=mucon
+Description=braincache
 
 [Service]
 User=pi
@@ -8,8 +8,8 @@ TimeoutSec=900
 ExecStartPre=/bin/sh -c 'cd ui && rm -rf build'
 ExecStartPre=/bin/sh -c 'cd ui && yarn build && rm -rf dist && mv build dist'
 ExecStartPre=/bin/sh -c 'cd server && /usr/local/go/bin/go build'
-ExecStart=/home/pi/code/mucon/server/server
-WorkingDirectory=/home/pi/code/mucon/
+ExecStart=/home/pi/code/braincache/server/server
+WorkingDirectory=/home/pi/code/braincache/
 
 [Install]
 WantedBy=multi-user.target
