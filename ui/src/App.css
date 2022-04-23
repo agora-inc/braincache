@@ -3,17 +3,12 @@
   min-height: 100vh;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   text-align: left;
-  background-color: black;
-  background-image: url("https://braincache.club/images/background-2.png");
-  background-size: 2235px 1177px;
+  background-image: url("https://braincache.club/images/background-3.png");
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-}
-
-.App.mobile {
-  background-size: cover;
 }
 
 a {
@@ -21,7 +16,7 @@ a {
 }
 
 .App-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
@@ -61,6 +56,34 @@ a {
   font-weight: normal;
 }
 
+.type-selector {
+  position: sticky;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: black;
+  padding: 2px 15px;
+  padding-bottom: 7px;
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.type-selector.mobile {
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.type-selector-option {
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.type-selector-option.active {
+  color: white;
+  text-decoration: underline;
+}
+
 .coming-soon {
   margin: 20px;
   color: white;
@@ -77,15 +100,17 @@ a {
 .main-content {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  width: 50%;
   min-width: 500px;
   margin: 80px;
+  margin-top: 220px;
 }
 
 .main-content.mobile {
-  width: 75%;
+  width: 80%;
   min-width: 100px;
   margin: 30px;
+  margin-top: 100px;
 }
 
 .main-text {
@@ -98,26 +123,33 @@ a {
 }
 
 .main-text.mobile {
-  margin-bottom: 30px;
-  font-size: 36px;
+  margin-bottom: 20px;
+  font-size: 32px;
   line-height: 32px;
 }
 
 .secondary-text {
   width: 80%;
-  color: white;
+  color: #cdcdcd;
   font-weight: normal;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
   margin-top: 0;
   font-size: 28px;
-  line-height: 26px;
+  line-height: 29px;
+}
+
+em {
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
 }
 
 .secondary-text.mobile {
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 22px;
+  width: 90%;
+  margin-bottom: 10px;
+  font-size: 21px;
   line-height: 19px;
 }
 
@@ -126,15 +158,15 @@ a {
   /* background-color: rgb(2, 2, 173); */
   background: white;
   color: black;
-  font-size: 26px;
+  font-size: 25px;
   padding: 10px 30px;
   border-radius: 40px;
   font-weight: 800;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .main-button.mobile {
   font-size: 20px;
   padding: 8px 26px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
