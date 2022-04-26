@@ -21,3 +21,27 @@ export const BusinessMainCopy = [
   </>,
   <>Gain {<em>quick access</em>} to critical insight and knowledge</>,
 ];
+
+export type TestimonialItem = {
+  text: string;
+  name: string;
+  institution: string;
+};
+
+export const TestimonialCopy: TestimonialItem[] = [
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    name: "Famous professor",
+    institution: "Prestigious university",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    name: "Very smart PhD student",
+    institution: "Different prestigious university",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    name: "Ambitious entrepreneur",
+    institution: "Fast-growing AI startup",
+  },
+];
