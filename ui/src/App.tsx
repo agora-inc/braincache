@@ -147,6 +147,9 @@ const App = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
+      style={{
+        backgroundImage: `url(${window.location.origin}/images/background-3.png)`,
+      }}
     >
       <header className={"App-header"}>
         <motion.a
