@@ -2,14 +2,14 @@
 Description=braincache
 
 [Service]
-User=pi
+User=cloud-user
 Type=simple
 TimeoutSec=900
 ExecStartPre=/bin/sh -c 'cd ui && rm -rf build'
 ExecStartPre=/bin/sh -c 'cd ui && yarn build && rm -rf dist && mv build dist'
 ExecStartPre=/bin/sh -c 'cd server && /usr/local/go/bin/go build'
-ExecStart=/home/pi/code/braincache/server/server
-WorkingDirectory=/home/pi/code/braincache/
+ExecStart=/home/cloud-user/braincache/server/server
+WorkingDirectory=/home/cloud-user/braincache/
 
 [Install]
 WantedBy=multi-user.target
