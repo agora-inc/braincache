@@ -6,10 +6,11 @@ User=cloud-user
 Type=simple
 TimeoutSec=900
 ExecStartPre=/bin/sh -c 'cd ui && rm -rf build'
-ExecStartPre=/bin/sh -c 'cd ui && nvm use 16 && yarn build && rm -rf dist && mv build dist'
+ExecStartPre=/bin/sh -c 'cd ui && yarn build && rm -rf dist && mv build dist'
 ExecStartPre=/bin/sh -c 'cd server && /usr/local/go/bin/go build'
 ExecStart=/home/cloud-user/braincache/server/server
 WorkingDirectory=/home/cloud-user/braincache/
+Environment=PATH=/home/cloud-user/.nvm/versions/node/v16.15.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 [Install]
 WantedBy=multi-user.target
