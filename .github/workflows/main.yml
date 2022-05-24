@@ -31,4 +31,4 @@ jobs:
         with:
           url: "http://ec2-3-11-98-113.eu-west-2.compute.amazonaws.com:9000/deploy"
           method: "POST"
-          data: '{"repo": "${{ inputs.repo }}", "service_file_changed": ${{ steps.changed.outputs.changed }}}'
+          data: '{"repo": "braincache", "service_file_changed": ${{ steps.changed.outputs.changed }}}'
