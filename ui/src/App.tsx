@@ -160,7 +160,7 @@ const App = () => {
           style={{ opacity: headerOpacity }}
         >
           <Logo className={classname("header-logo")} />
-          <div className={classname("header-name")}>Braincache!</div>
+          <div className={classname("header-name")}>Braincache</div>
         </motion.a>
         {!onMobile && typeSelector}
         <motion.a
