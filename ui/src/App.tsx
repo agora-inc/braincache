@@ -167,7 +167,7 @@ const App = () => {
           className={classname("coming-soon")}
           href="https://airtable.com/shrhGt0giRGAY3yxA"
           // animate={{ rotate: "2deg" }}
-          whileHover={{ scale: 1.06 }}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           style={{ opacity: headerOpacity }}
         >
