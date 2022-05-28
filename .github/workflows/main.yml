@@ -12,6 +12,23 @@ on:
 
 jobs:
   deployment:
-    uses: agora-inc/deployer/.github/workflows/main.yml@master
-    with:
-      repo: braincache
+    runs-on: ubuntu-latest
+    steps:
+      - name: Changed Files
+        id: files
+        uses: jitterbit/get-changed-files@v1
+      - name: Service File Modified
+        id: changed
+        run: |
+          changed=false
+          for cf in ${{ steps.files.outputs.all }}; do
+            if [[ $cf == *.service ]]; then changed=true; fi
+          done
+          echo $changed
+          echo "::set-output name=changed::$changed"
+      - name: Deploy Stage
+        uses: fjogeleit/http-request-action@master
+        with:
+          url: "http://ec2-3-11-98-113.eu-west-2.compute.amazonaws.com:9000/deploy"
+          method: "POST"
+          data: '{"repo": "braincache", "service_file_changed": ${{ steps.changed.outputs.changed }}}'
