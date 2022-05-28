@@ -33,7 +33,7 @@ type Server struct {
 
 func CreateServer() (Server, error) {
 	s := Server{
-		Port: ":8005",
+		Port: ":8002",
 	}
 
 	// initiate router
