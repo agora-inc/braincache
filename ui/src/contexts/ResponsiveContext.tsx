@@ -1,43 +1,58 @@
-import React, { useState, createContext, useEffect } from 'react'
+import React, { useState, createContext, useEffect, useContext } from 'react'
 
-
-const ResponsiveContext = createContext({});
+const MOBILE_BREAKPOINT = 480;
+const TABLET_BREAKPOINT = 960;
 
 interface WindowData {
     width: number;
     height: number;
+    isMobile: boolean;
+    isLargeMobile: boolean;
 }
 
 const windowValues = {
     width: window.innerWidth, 
-    height: window.innerHeight
+    height: window.innerHeight,
+    isMobile: window.innerWidth < MOBILE_BREAKPOINT,
+    isLargeMobile: window.innerWidth < TABLET_BREAKPOINT,
 }
 
+const ResponsiveContext = createContext(windowValues);
+
+const useResponsiveContextData = () => useContext<WindowData>(ResponsiveContext)
+
 const ResponsiveProvider = (props: any) => {
+
     const [windowSize, setWindowSize] = useState<WindowData>(windowValues);
 
-    useEffect(() => {
-      window.addEventListener("resize", () => {
-        setWindowSize({
-            width: window.innerWidth, 
-            height: window.innerHeight
-        })
-      });
-    
-      return () => {
+    const addWindowListener = () => {
+        window.addEventListener("resize", () => {
+            setWindowSize({
+                width: window.innerWidth, 
+                height: window.innerHeight,
+                isMobile: window.innerWidth < MOBILE_BREAKPOINT,
+                isLargeMobile: window.innerWidth < TABLET_BREAKPOINT,
+            })
+        });
+
+    }
+
+    const removeWindowListener = () => {
         window.removeEventListener("resize", () => {
             setWindowSize({
                 width: window.innerWidth, 
-                height: window.innerHeight
+                height: window.innerHeight,
+                isMobile: window.innerWidth < MOBILE_BREAKPOINT,
+                isLargeMobile: window.innerWidth < TABLET_BREAKPOINT,
             })
         });
-      };
+    }
+
+    useEffect(() => {
+      addWindowListener();    
+      return () => removeWindowListener();
     }, [])
     
-
-
-    
-    const test: any = { one: "ONE", two: "TWO" };
     return(
         <ResponsiveContext.Provider value={windowSize}>
             {props.children}
@@ -45,5 +60,5 @@ const ResponsiveProvider = (props: any) => {
     );
 };
 
-export { ResponsiveContext, ResponsiveProvider };
-// export { ResponsiveProvider };
+export { ResponsiveProvider, useResponsiveContextData };
+export type { WindowData };

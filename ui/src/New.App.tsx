@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 import {ResponsiveProvider} from './contexts/ResponsiveContext'
 
 import IndexPage from "./Pages/IndexPage";
@@ -9,6 +12,9 @@ import HomePage from "./Pages/HomePage";
 import NoPage from "./Pages/404Page";
 import ExpertLandingPage from "./Pages/ExpertLandingPage";
 import CompanyLandingPage from "./Pages/CompanyLandingPage";
+
+
+library.add(faCoffee)
 
 const App = () => {
   return (
