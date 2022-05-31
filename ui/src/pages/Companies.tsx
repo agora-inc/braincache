@@ -14,8 +14,8 @@ export const Companies = () => {
     return `${name}${onMobile ? " mobile" : ""}`;
   };
 
-  const { scrollYProgress } = useViewportScroll();
-  const headerOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
+  //   const { scrollYProgress } = useViewportScroll();
+  //   const headerOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
 
   //   const typeSelector = (
   //     <motion.div
@@ -58,22 +58,27 @@ export const Companies = () => {
           href="/"
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.95 }}
-          style={{ opacity: headerOpacity }}
+          //   style={{ opacity: headerOpacity }}
         >
           <Logo className={classname("header-logo")} />
           <div className={classname("header-name")}>BrainAPI</div>
         </motion.a>
         {/* {!onMobile && typeSelector} */}
-        <motion.a
-          className={classname("coming-soon")}
-          href="https://airtable.com/shrhGt0giRGAY3yxA"
-          // animate={{ rotate: "2deg" }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          style={{ opacity: headerOpacity }}
-        >
-          Join the waitlist →
-        </motion.a>
+        <div>
+          <motion.a className="switch-page-link" href="/academics">
+            For academics
+          </motion.a>
+          <motion.a
+            className={classname("coming-soon")}
+            href="https://airtable.com/shrhGt0giRGAY3yxA"
+            // animate={{ rotate: "2deg" }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            //   style={{ opacity: headerOpacity }}
+          >
+            Join the waitlist →
+          </motion.a>
+        </div>
       </header>
       <div className={classname("main-content")}>
         {/* {onMobile && typeSelector} */}

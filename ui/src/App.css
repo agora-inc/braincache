@@ -56,36 +56,14 @@ a {
   font-weight: normal;
 }
 
-.type-selector {
-  position: sticky;
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: black;
-  padding: 2px 15px;
-  padding-bottom: 7px;
-  border-radius: 12px;
-  box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
-}
-
-.type-selector.mobile {
-  margin-bottom: 10px;
-  font-size: 18px;
-  padding: 4px 10px;
-  border-radius: 20px;
-}
-
-.type-selector-option {
-  cursor: pointer;
-  transition: all 500ms;
-}
-
-.type-selector-option.active {
+.switch-page-link {
   color: white;
   text-decoration: underline;
 }
 
 .coming-soon {
   margin: 20px;
+  margin-left: 10px;
   color: white;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 7px 12px;
