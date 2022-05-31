@@ -1,0 +1,43 @@
+.features {
+    margin: 80px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .features.mobile {
+    width: 100%;
+    overflow-x: scroll;
+    margin: 30px;
+  }
+  
+  .features::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .feature {
+    width: 30%;
+    min-width: 250px;
+    max-width: 500px;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .feature-step {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+  
+  .feature-line {
+    border-bottom: 5px solid white;
+    height: 5px;
+    flex-grow: 100;
+    margin-top: 5px;
+  }
