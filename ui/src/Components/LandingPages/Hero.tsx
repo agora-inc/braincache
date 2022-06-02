@@ -22,7 +22,7 @@ const Hero = (props: Props) => {
         <div style={styles.hero_content}>
           <h1 style={styles.hero_title}>Some Title</h1>
           <p style={styles.hero_strapline}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button style={styles.hero_cta}>Register</button>
+          <button style={styles.hero_cta} onClick={(e) => props.cta_action(e)}>Register</button>
         </div>
       </div>
     </div>

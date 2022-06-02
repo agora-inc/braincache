@@ -7,6 +7,10 @@ import {useResponsiveContextData} from '../contexts/ResponsiveContext'
 import Hero from '../Components/LandingPages/Hero'
 import IconValueGrid from '../Components/LandingPages/IconValueGrid'
 import ReverseRowSection from '../Components/LandingPages/ReverseRowSection'
+import TierSection from '../Components/LandingPages/TierSection'
+import StripRow from '../Components/LandingPages/StripRow'
+
+import Modal from '../Components/Core/Modal'
 
 import {rowPadding} from '../dimensions'
 
@@ -15,9 +19,10 @@ import online_meeting from "../assets/online_meeting.jpg";
 import professor_reading from "../assets/professor_reading.jpg";
 import scientists from "../assets/scientists.jpg";
 import study from "../assets/study.jpg";
+import strip_bg from "../assets/strip_bg.jpg";
 
 const HomePage = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(true)
 
   const dummy_data = [
     {icon: <FontAwesomeIcon icon="coffee" style={styles.icon} />, header: "This is the first", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"},
@@ -37,24 +42,39 @@ const HomePage = () => {
     {text: perks_item_4, image: study}
   ].map(data => { 
     return {left: <>{data.text}</>, right:<><img src={data.image} style={styles.image} /></>} 
-  });  
+  });
+
+  const toggleModal = (e: React.MouseEvent) => {
+    console.log("YES")
+    setShowModal(!showModal)
+  }
+  
   
   return (
-    <div>
-      <Hero image={hero_bg} cta_action={() => {}} />
+    <div style={{width: "100%"}}>
+      <Modal show={showModal} close={toggleModal}>
+        <h1>TEST</h1>
+      </Modal>
+      <Hero image={hero_bg} cta_action={toggleModal} />
       <div style={styles.section_container}>
         <div style={styles.center_elements}><h3>It is so easy to get started</h3></div>
         <div style={styles.center_elements}><h6>It is so easy to get started</h6></div>
         <IconValueGrid items={dummy_data} />
       </div>
-      <ReverseRowSection items={reverseRowData} innerWidth={1200} leftPosition={"center"} />
+      <TierSection />
+      <ReverseRowSection items={reverseRowData} innerWidth={1000} leftPosition={"center"} />
+      <StripRow bg_img={strip_bg}>
+        <h1 style={styles.strip_header}>Hello World</h1>
+        <p style={styles.strip_subheader}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <a style={styles.strip_action} href="#">Find an Expert</a>
+      </StripRow>
     </div>
   )
 }
 
 const styles = {
   section_container: {
-    padding: `${rowPadding}px 0px`
+    padding: rowPadding
   },
   center_elements: {
     textAlign: "center"
@@ -68,8 +88,27 @@ const styles = {
     alignSelf: "center"
   },
   image: {
-    width: "350px",
+    maxWidth: "350px",
     height: "auto"
+  },
+  strip_header: {
+    fontSize: 35,
+    marginBottom: 25,
+    color: "#fff"
+  },
+  strip_subheader: {
+    fontSize: 15,
+    color: "#fff",
+    marginBottom: 25,
+    maxWidth: 300,
+    textAlign: "center"
+  },
+  strip_action: {
+    background: "#fff",
+    padding: "10px 20px",
+    textDecoration: "none",
+    borderRadius: 5,
+
   }
 } as const;
 

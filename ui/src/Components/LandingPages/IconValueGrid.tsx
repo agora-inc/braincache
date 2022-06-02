@@ -36,6 +36,7 @@ const IconValueGrid = (props: Props) => {
                     windowWidth={width}
                     gap={20}
                     align={"center"}
+                    justify={"center"}
                     gridBreakpoints={[{screenSize: 1200, columns: 3}, {screenSize: 800, columns: 2}]}
                 />
             </div>

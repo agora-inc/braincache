@@ -49,7 +49,7 @@ const MoraFlexibleGrid = (props: Props) => {
 
   const container_styles = {
     display: "flex",
-    flexWrap: "nowrap",
+    flexWrap: "wrap",
     alignItems: "stretch",
     width: "100%",
     flexDirection: 'row',

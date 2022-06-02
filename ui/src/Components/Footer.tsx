@@ -10,10 +10,7 @@ import logo from "../logo.svg";
 
 const Footer = () => {
 
-  const {width} = useResponsiveContextData()
-
-  console.log(rowPadding);
-  
+  const {width} = useResponsiveContextData()  
 
   const footer_column_1 = 
     <div style={styles.top_footer_section}>
@@ -90,7 +87,8 @@ const styles = {
     paddingBottom: rowPadding,
   },
   inner_footer: {
-    width: '1200px',
+    maxWidth: '1200px',
+    width: "100%",
     color: "#fff"
   },
   top_footer: {
