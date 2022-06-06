@@ -56,22 +56,22 @@ const styles = {
 
 const dummy_data = [
   {
-    icon: <FontAwesomeIcon icon="coffee" style={styles.icon} />,
+    icon: <FontAwesomeIcon icon="address-card" style={styles.icon} />,
     header: "Create your profile",
     description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
   },
   {
-    icon: <FontAwesomeIcon icon="coffee" style={styles.icon} />,
+    icon: <FontAwesomeIcon icon="envelope" style={styles.icon} />,
     header: "Connect with relevant businesses",
     description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
   },
   {
-    icon: <FontAwesomeIcon icon="coffee" style={styles.icon} />,
-    header: "Help solve interesting problems",
+    icon: <FontAwesomeIcon icon="sitemap" style={styles.icon} />,
+    header: "Solve interesting problems",
     description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
   },
   {
-    icon: <FontAwesomeIcon icon="coffee" style={styles.icon} />,
+    icon: <FontAwesomeIcon icon="coins" style={styles.icon} />,
     header: "Get rewarded",
     description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
   },
