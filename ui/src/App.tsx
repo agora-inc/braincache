@@ -1,24 +1,38 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import React from 'react'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Academics } from "./pages/Academics";
-import { Companies } from "./pages/Companies";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+import {ResponsiveProvider} from './contexts/ResponsiveContext'
+
+import IndexPage from "./Pages/IndexPage";
+import HomePage from "./Pages/HomePage";
+import NoPage from "./Pages/404Page";
+import ExpertLandingPage from "./Pages/ExpertLandingPage";
+import CompanyLandingPage from "./Pages/CompanyLandingPage";
+
+
+library.add(faCoffee)
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/academics" element={<Academics />} />
-        <Route path="/companies" element={<Companies />} />
-        <Route path="/" element={<Navigate to="/companies" replace={true} />} />
-      </Routes>
-    </Router>
-  );
-};
+
+    <ResponsiveProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<IndexPage />}>
+            <Route index element={<HomePage />} />
+            <Route path="experts" element={<ExpertLandingPage />} />
+            <Route path="companies" element={<CompanyLandingPage />} />
+          </Route>
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
+    </ResponsiveProvider>
+
+  )
+}
 
 export default App;
