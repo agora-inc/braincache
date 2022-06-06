@@ -58,22 +58,35 @@ const dummy_data = [
   {
     icon: <FontAwesomeIcon icon="address-card" style={styles.icon} />,
     header: "Create your profile",
-    description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+    description: [
+      "Join as a gold, platinum or diamond expert depending on your experience",
+      "Add information about your research expertise and interests",
+      "Set your availability and contact preferences",
+    ],
   },
   {
     icon: <FontAwesomeIcon icon="envelope" style={styles.icon} />,
     header: "Connect with relevant businesses",
-    description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+    description: [
+      "Answer questions through messaging",
+      "join a video call",
+      "or get hired for a 10-hour mission",
+    ],
   },
   {
     icon: <FontAwesomeIcon icon="sitemap" style={styles.icon} />,
     header: "Solve interesting problems",
-    description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+    description: [
+      "Apply your unique expertise to interesting real-world problems",
+    ],
   },
   {
     icon: <FontAwesomeIcon icon="coins" style={styles.icon} />,
     header: "Get rewarded",
-    description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"],
+    description: [
+      "Get paid after every successful mission",
+      "Complete more missions to boost your expert rank and increase your rewards!",
+    ],
   },
 ];
 
