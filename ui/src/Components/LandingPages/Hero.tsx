@@ -63,6 +63,7 @@ const styles = {
   },
   hero_selling_point: {
     fontSize: "20px",
+    
   },
   hero_cta: {
     padding: "10px 18px",

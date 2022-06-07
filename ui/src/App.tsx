@@ -9,6 +9,9 @@ import {
   faEnvelope,
   faSitemap,
   faCoins,
+  faSearch,
+  faCalendar,
+  faHandshake
 } from "@fortawesome/free-solid-svg-icons";
 
 import { ResponsiveProvider } from "./contexts/ResponsiveContext";
@@ -19,7 +22,7 @@ import NoPage from "./Pages/404Page";
 import ExpertLandingPage from "./Pages/ExpertLandingPage";
 import CompanyLandingPage from "./Pages/CompanyLandingPage";
 
-library.add(faCoffee, faAddressCard, faEnvelope, faSitemap, faCoins);
+library.add(faCoffee, faAddressCard, faEnvelope, faSitemap, faCoins, faSearch, faCalendar, faHandshake);
 
 const App = () => {
   return (
@@ -29,7 +32,7 @@ const App = () => {
           <Route path="/" element={<IndexPage />}>
             <Route index element={<HomePage />} />
             <Route path="experts" element={<ExpertLandingPage />} />
-            <Route path="companies" element={<CompanyLandingPage />} />
+            {/* <Route path="companies" element={<CompanyLandingPage />} /> */}
           </Route>
           <Route path="*" element={<NoPage />} />
         </Routes>

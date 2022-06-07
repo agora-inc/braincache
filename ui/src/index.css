@@ -49,6 +49,7 @@ h6 {
 p {
   font-size: 1.7rem;
   margin: 0 0 10px;
+  white-space: pre-wrap;
 }
 
 code {

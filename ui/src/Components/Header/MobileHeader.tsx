@@ -27,7 +27,7 @@ const MobileHeader = () => {
       </div>
       <div style={{ ...styles.mobile_navbar, ...open_menu }}>
         <nav>
-          <Link style={styles.mobile_links} to="/companies">
+          <Link style={styles.mobile_links} to="/">
             Companies
           </Link>
           <Link style={styles.mobile_links} to="/experts">

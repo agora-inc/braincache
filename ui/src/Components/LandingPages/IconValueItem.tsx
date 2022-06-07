@@ -18,7 +18,7 @@ const IconValueItem = (props: IconValueItemProps) => {
       </div>
       <div>
         {props.description.map((d: string) => (
-          <p>{d}</p>
+          <p style={styles.desc}>{d}</p>
         ))}
       </div>
     </div>
@@ -29,10 +29,12 @@ const styles = {
   item_container: {
     textAlign: "center",
     width: "100%",
-    border: "1px solid #00000026",
-    borderRadius: 2,
+    border: ".1px solid #00000026",
+    borderRadius: 3,
     minHeight: 300,
     justifyContent: "center",
+    boxSizing: "border-box",
+    padding: "20px"
   },
   icon_container: {
     marginBottom: "20px",
@@ -40,6 +42,9 @@ const styles = {
   header_container: {
     marginBottom: "20px",
   },
+  desc: {
+    fontSize: "1.3rem"
+  }
 } as const;
 
 export default IconValueItem;

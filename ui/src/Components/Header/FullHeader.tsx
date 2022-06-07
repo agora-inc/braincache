@@ -12,7 +12,7 @@ const FullHeader = () => {
         </Link>
         <div style={styles.nav_container}>
           <nav style={styles.navbar}>
-            <Link to="/companies" style={styles.navbar_links}>
+            <Link to="/" style={styles.navbar_links}>
               For companies
             </Link>
             <Link to="/experts" style={styles.navbar_links}>
