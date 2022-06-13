@@ -26,9 +26,12 @@ const Hero = (props: Props) => {
               <p style={styles.hero_selling_point}>{sp}</p>
             ))}
           </div>
-          <button style={styles.hero_cta} onClick={(e) => props.cta_action(e)}>
+          <a
+            style={styles.hero_cta}
+            href="https://airtable.com/shrhGt0giRGAY3yxA"
+          >
             Join waitlist
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -72,7 +75,8 @@ const styles = {
     borderRadius: "5px",
     border: "none",
     color: "#006ab1",
-    cursor: "pointer",
+    backgroundColor: "#fff",
+    textDecoration: "none",
   },
 };
 

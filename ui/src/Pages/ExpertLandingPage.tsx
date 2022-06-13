@@ -126,7 +126,10 @@ const ExpertLandingPage = () => {
           clients and doing paperwork?
         </div>
         <div style={styles.bottom_section_cta_container}>
-          <a style={styles.bottom_section_cta} href="/">
+          <a
+            style={styles.bottom_section_cta}
+            href="https://airtable.com/shrhGt0giRGAY3yxA"
+          >
             Register today
           </a>
         </div>
