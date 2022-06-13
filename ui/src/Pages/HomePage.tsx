@@ -28,40 +28,67 @@ const HomePage = () => {
     {
       icon: <FontAwesomeIcon icon="search" style={styles.icon} />,
       header: "Search",
-      description: ["Search our database of experts. We have a network of academics which includes researchers and top professors."],
+      description: [
+        "Search our database of experts. We have a network of academics which includes researchers and top professors.",
+      ],
     },
     {
       icon: <FontAwesomeIcon icon="calendar" style={styles.icon} />,
       header: "Schedule",
-      description: ["Once you have identified your expert(s). You can schedule a quick chat to discuss important details to help you decide."],
+      description: [
+        "Once you have identified your expert(s). You can schedule a quick chat to discuss important details to help you decide.",
+      ],
     },
     {
       icon: <FontAwesomeIcon icon="handshake" style={styles.icon} />,
       header: "Start",
-      description: ["We provide a standard NDA which gets the legal work out the way allowing you to focus on your problems with an academic expert."],
+      description: [
+        "We provide a standard NDA which gets the legal work out the way allowing you to focus on your problems with an academic expert.",
+      ],
     },
   ];
 
   const perks_item_1 = (
     <div style={styles.perks_row}>
       <h3>Why BrainAPI?</h3>
-      <p>BrainAPI is a platform that connects Startups, consultancies and other companies with academic experts.</p>
-      <p>Our platform is easy to use and designed to connect you quickly with our passionate experts.</p>
+      <p>
+        BrainAPI is a platform that connects Startups, consultancies and other
+        companies with academic experts.
+      </p>
+      <p>
+        Our platform is easy to use and designed to connect you quickly with our
+        passionate experts.
+      </p>
     </div>
   );
   const perks_item_2 = (
     <div style={styles.perks_row}>
       <h3>How does BrainAPI help?</h3>
-      <p>You start by searching for an expert. We provide a customized list with the different tiers of experts available.</p>
-      <p>You can choose from our Gold (top 5%), Platinum (top 1%) or Diamond (top 0.1%) experts.</p>
-      <p>It's super easy to book someone with using BrainAPI, we even provide standard NDAs to allow you to focus on your problem.</p>
+      <p>
+        You start by searching for an expert. We provide a customized list with
+        the different tiers of experts available.
+      </p>
+      <p>
+        You can choose from our Gold (top 5%), Platinum (top 1%) or Diamond (top
+        0.1%) experts.
+      </p>
+      <p>
+        It's super easy to book someone with using BrainAPI, we even provide
+        standard NDAs to allow you to focus on your problem.
+      </p>
     </div>
   );
   const perks_item_3 = (
     <div style={styles.perks_row}>
       <h3>Who are BrainAPI experts?</h3>
-      <p>We are a network of academic experts in fields such as Computer Science, Math, AI, ML & Natural Sciences.</p>
-      <p>We have a very robust application process to ensure that all experts have experience in high-quality work.</p>
+      <p>
+        We are a network of academic experts in fields such as Computer Science,
+        Math, AI, ML & Natural Sciences.
+      </p>
+      <p>
+        We have a very robust application process to ensure that all experts
+        have experience in high-quality work.
+      </p>
     </div>
   );
   const perks_item_4 = (
@@ -102,8 +129,10 @@ const HomePage = () => {
       </Modal>
       <Hero
         image={hero_bg}
+        main_text="Connecting high-impact businesses to relevant experts in academia"
         selling_points={[
-          `Finding a world-class expert has never been easier.\nSign up now to get early access`,
+          "Finding a world-class expert has never been easier",
+          "Sign up now to get early access",
         ]}
         cta_action={toggleModal}
       />
@@ -112,7 +141,10 @@ const HomePage = () => {
           <h3>It is so easy to get started</h3>
         </div>
         <div style={styles.center_elements}>
-          <p style={styles.para_width}>A simple 3 step process gets you a world-class expert quickly so you can focus on doing the things that need to get done</p>
+          <p style={styles.para_width}>
+            A simple 3 step process gets you a world-class expert quickly so you
+            can focus on doing the things that need to get done
+          </p>
         </div>
         <IconValueGrid items={dummy_data} />
       </div>
@@ -127,9 +159,7 @@ const HomePage = () => {
         <p style={styles.strip_subheader}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
-        <button style={styles.strip_action}>
-          Find an Expert
-        </button>
+        <button style={styles.strip_action}>Find an Expert</button>
       </StripRow>
     </div>
   );
@@ -141,11 +171,11 @@ const styles = {
   },
   center_elements: {
     textAlign: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   para_width: {
     maxWidth: "500px",
-    fontSize: "1.4rem"
+    fontSize: "1.4rem",
   },
   icon: {
     // fontSize: "1.5rem",
@@ -155,7 +185,7 @@ const styles = {
     height: "35px",
     padding: "15px",
     borderRadius: "50%",
-    margin: "auto"
+    margin: "auto",
   },
   perks_row: {
     width: "300px",

@@ -23,8 +23,13 @@ const styles = {
     textAlign: "center",
   },
   icon: {
-    fontSize: "5.5rem",
     color: "#2d86c1",
+    background: "#e2e9f1",
+    width: "35px",
+    height: "35px",
+    padding: "15px",
+    borderRadius: "50%",
+    margin: "auto",
   },
   perks_row: {
     width: "300px",
@@ -57,7 +62,7 @@ const styles = {
 const dummy_data = [
   {
     icon: <FontAwesomeIcon icon="address-card" style={styles.icon} />,
-    header: "Create your profile",
+    header: "1. Create your profile",
     description: [
       "Join as a gold, platinum or diamond expert depending on your experience",
       "Add information about your research expertise and interests",
@@ -66,7 +71,7 @@ const dummy_data = [
   },
   {
     icon: <FontAwesomeIcon icon="envelope" style={styles.icon} />,
-    header: "Connect with relevant businesses",
+    header: "2. Connect with relevant businesses",
     description: [
       "Answer questions through messaging",
       "join a video call",
@@ -75,14 +80,14 @@ const dummy_data = [
   },
   {
     icon: <FontAwesomeIcon icon="sitemap" style={styles.icon} />,
-    header: "Solve interesting problems",
+    header: "3. Solve interesting problems",
     description: [
       "Apply your unique expertise to interesting real-world problems",
     ],
   },
   {
     icon: <FontAwesomeIcon icon="coins" style={styles.icon} />,
-    header: "Get rewarded",
+    header: "4. Get rewarded",
     description: [
       "Get paid after every successful mission",
       "Complete more missions to boost your expert rank and increase your rewards!",
@@ -95,6 +100,7 @@ const ExpertLandingPage = () => {
     <div style={{ width: "100%" }}>
       <Hero
         image={hero_bg}
+        main_text="Connect with relevant companies to boost your income and energise your research"
         selling_points={[
           "Explore non-binding microconsulting opportunities across a range of companies",
           "Commit a few hours per week and boost your income by thousands",
