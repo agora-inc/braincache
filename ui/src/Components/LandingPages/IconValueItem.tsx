@@ -12,9 +12,11 @@ interface IconValueItemProps {
 const IconValueItem = (props: IconValueItemProps) => {
   return (
     <div style={styles.item_container}>
-      <div style={styles.icon_container}>{props.icon}</div>
-      <div style={styles.header_container}>
-        <h5>{props.header}</h5>
+      <div>
+        <div style={styles.icon_container}>{props.icon}</div>
+        <div style={styles.header_container}>
+          <h5>{props.header}</h5>
+        </div>
       </div>
       <div>
         {props.description.map((d: string) => (
@@ -27,24 +29,27 @@ const IconValueItem = (props: IconValueItemProps) => {
 
 const styles = {
   item_container: {
+    justifyContent: "space-between",
     textAlign: "center",
     width: "100%",
     border: ".1px solid #00000026",
     borderRadius: 3,
     minHeight: 300,
-    justifyContent: "center",
     boxSizing: "border-box",
-    padding: "20px"
+    padding: "20px",
+    flexGrow: 1,
   },
   icon_container: {
-    marginBottom: "20px",
+    marginBottom: "10px",
   },
   header_container: {
-    marginBottom: "20px",
+    marginBottom: "10px",
   },
   desc: {
-    fontSize: "1.3rem"
-  }
+    fontSize: "1.5rem",
+    fontWeight: 600,
+    color: "#757575",
+  },
 } as const;
 
 export default IconValueItem;

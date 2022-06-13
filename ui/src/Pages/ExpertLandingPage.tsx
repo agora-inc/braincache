@@ -23,8 +23,13 @@ const styles = {
     textAlign: "center",
   },
   icon: {
-    fontSize: "5.5rem",
     color: "#2d86c1",
+    background: "#e2e9f1",
+    width: "35px",
+    height: "35px",
+    padding: "15px",
+    borderRadius: "50%",
+    margin: "auto",
   },
   perks_row: {
     width: "300px",
@@ -34,22 +39,25 @@ const styles = {
     maxWidth: "350px",
     height: "auto",
   },
-  strip_header: {
-    fontSize: 35,
-    marginBottom: 25,
-    color: "#fff",
+  bottom_section: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    padding: `${2 * rowPadding}px ${rowPadding}px`,
+    backgroundColor: "#ebedf5",
   },
-  strip_subheader: {
-    fontSize: 15,
-    color: "#fff",
-    marginBottom: 25,
-    maxWidth: 300,
-    textAlign: "center",
+  bottom_section_text: {
+    width: "60%",
+    fontSize: 40,
   },
-  strip_action: {
-    background: "#fff",
-    padding: "10px 20px",
+  bottom_section_cta_container: {},
+  bottom_section_cta: {
+    fontSize: 24,
+    fontWeight: 600,
+    color: "white",
     textDecoration: "none",
+    backgroundColor: "black",
+    padding: "10px 35px",
     borderRadius: 5,
   },
 } as const;
@@ -57,7 +65,7 @@ const styles = {
 const dummy_data = [
   {
     icon: <FontAwesomeIcon icon="address-card" style={styles.icon} />,
-    header: "Create your profile",
+    header: "1. Create your profile",
     description: [
       "Join as a gold, platinum or diamond expert depending on your experience",
       "Add information about your research expertise and interests",
@@ -66,7 +74,7 @@ const dummy_data = [
   },
   {
     icon: <FontAwesomeIcon icon="envelope" style={styles.icon} />,
-    header: "Connect with relevant businesses",
+    header: "2. Connect with relevant businesses",
     description: [
       "Answer questions through messaging",
       "join a video call",
@@ -75,14 +83,14 @@ const dummy_data = [
   },
   {
     icon: <FontAwesomeIcon icon="sitemap" style={styles.icon} />,
-    header: "Solve interesting problems",
+    header: "3. Solve interesting problems",
     description: [
       "Apply your unique expertise to interesting real-world problems",
     ],
   },
   {
     icon: <FontAwesomeIcon icon="coins" style={styles.icon} />,
-    header: "Get rewarded",
+    header: "4. Get rewarded",
     description: [
       "Get paid after every successful mission",
       "Complete more missions to boost your expert rank and increase your rewards!",
@@ -95,6 +103,7 @@ const ExpertLandingPage = () => {
     <div style={{ width: "100%" }}>
       <Hero
         image={hero_bg}
+        main_text="Connect with relevant companies to boost your income and energise your research"
         selling_points={[
           "Explore non-binding microconsulting opportunities across a range of companies",
           "Commit a few hours per week and boost your income by thousands",
@@ -109,6 +118,21 @@ const ExpertLandingPage = () => {
           </h4>
         </div>
         <IconValueGrid items={dummy_data} />
+      </div>
+      <div style={styles.bottom_section}>
+        <div style={styles.bottom_section_text}>
+          Are you an academic in a STEM field that wants to explore the world of
+          microconsulting without having to waste time and energy on finding
+          clients and doing paperwork?
+        </div>
+        <div style={styles.bottom_section_cta_container}>
+          <a
+            style={styles.bottom_section_cta}
+            href="https://airtable.com/shrhGt0giRGAY3yxA"
+          >
+            Register today
+          </a>
+        </div>
       </div>
       {/* <TierSection /> */}
       {/* <ReverseRowSection

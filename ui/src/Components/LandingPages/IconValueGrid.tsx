@@ -24,7 +24,7 @@ const IconValueGrid = (props: Props) => {
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    maxWidth: "1200px",
+    maxWidth: "1400px",
   } as const;
 
   return (
