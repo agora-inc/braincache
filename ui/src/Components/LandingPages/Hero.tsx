@@ -4,7 +4,6 @@ interface Props {
   image: string;
   main_text: string;
   selling_points: string[];
-  cta_action: Function;
 }
 
 const Hero = (props: Props) => {
