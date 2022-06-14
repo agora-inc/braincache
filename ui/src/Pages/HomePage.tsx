@@ -109,11 +109,7 @@ const HomePage = () => {
   ].map((data) => {
     return {
       left: <>{data.text}</>,
-      right: (
-        <>
-          <img src={data.image} style={styles.image} />
-        </>
-      ),
+      right: <><img src={data.image} style={styles.image} /></>
     };
   });
 
@@ -155,11 +151,13 @@ const HomePage = () => {
         leftPosition={"center"}
       />
       <StripRow bg_img={strip_bg}>
-        <h1 style={styles.strip_header}>Are you an academic?</h1>
-        <p style={styles.strip_subheader}>
-          Explore the world of microconsulting where you can get paid to work on fascinating problems with some of the best companies and startups.
-        </p>
-        <a style={styles.strip_action} href={"/experts"}>Find an Expert</a>
+        <div style={styles.strip_bg_inner_container}>
+          <h1 style={styles.strip_header}>Are you an academic?</h1>
+          <p style={styles.strip_subheader}>
+            Explore the world of microconsulting where you can get paid to work on fascinating problems with some of the best companies and startups.
+          </p>
+          <a style={styles.strip_action} href={"/experts"}>Find an Expert</a>
+        </div>
       </StripRow>
     </div>
   );
@@ -188,12 +186,14 @@ const styles = {
     margin: "auto",
   },
   perks_row: {
-    width: "300px",
+    maxWidth: "300px",
     alignSelf: "center",
   },
   image: {
     maxWidth: "350px",
     height: "auto",
+    margin: "auto",
+    width: "100%"
   },
   row_button: {
     padding: "10px 18px",
@@ -205,11 +205,19 @@ const styles = {
     textDecoration: "none",
     textAlign: "center",
     cursor: "pointer",
+    marginBottom: "25px"
+  },
+  strip_bg_inner_container: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "0px 10px"
   },
   strip_header: {
     fontSize: 35,
     marginBottom: 25,
     color: "#fff",
+    textAlign: "center"
   },
   strip_subheader: {
     fontSize: 15,

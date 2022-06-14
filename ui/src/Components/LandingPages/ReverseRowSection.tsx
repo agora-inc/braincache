@@ -18,6 +18,10 @@ const ReverseRowSection = (props: Props) => {
     alignItems: "center"
   } as const;
 
+  const row_item = {
+    width: (width < 768) ? "100%" : "50%"
+  } as const
+
   return (
     <div style={container}>
         <div style={inner_container}>
@@ -50,10 +54,5 @@ const row = {
   alignItems: "center",
   padding: "40px 20px"
 }  as const;
-
-const row_item = {
-  width: '50%',
-  // alignItems: "center"
-} as const
 
 export default ReverseRowSection
