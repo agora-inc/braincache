@@ -1,19 +1,10 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useResponsiveContextData } from "../contexts/ResponsiveContext";
 import Hero from "../Components/LandingPages/Hero";
 import IconValueGrid from "../Components/LandingPages/IconValueGrid";
-import ReverseRowSection from "../Components/LandingPages/ReverseRowSection";
-import TierSection from "../Components/LandingPages/TierSection";
-import StripRow from "../Components/LandingPages/StripRow";
 import { rowPadding } from "../dimensions";
 import hero_bg from "../assets/hero_background2.jpg";
-import online_meeting from "../assets/online_meeting.jpg";
-import professor_reading from "../assets/professor_reading.jpg";
-import scientists from "../assets/scientists.jpg";
-import study from "../assets/study.jpg";
-import strip_bg from "../assets/strip_bg.jpg";
 
 const styles = {
   section_container: {
@@ -49,6 +40,11 @@ const styles = {
   bottom_section_text: {
     width: "60%",
     fontSize: 40,
+  },
+  bottom_section_asterisk: {
+    fontSize: 28,
+    marginTop: 5,
+    color: "#828282",
   },
   bottom_section_cta_container: {},
   bottom_section_cta: {
@@ -109,7 +105,6 @@ const ExpertLandingPage = () => {
           "Commit a few hours per week and boost your income by thousands",
           "We take care of all the paperwork - so you can focus on what matters",
         ]}
-        cta_action={() => {}}
       />
       <div style={styles.section_container}>
         <div style={styles.center_elements}>
@@ -121,9 +116,15 @@ const ExpertLandingPage = () => {
       </div>
       <div style={styles.bottom_section}>
         <div style={styles.bottom_section_text}>
-          Are you an academic in a STEM field that wants to explore the world of
-          microconsulting without having to waste time and energy on finding
-          clients and doing paperwork?
+          <div>
+            Are you an academic in a STEM field* that wants to explore the world
+            of microconsulting without having to waste time and energy on
+            finding clients and doing paperwork?
+          </div>
+          <div style={styles.bottom_section_asterisk}>
+            *we are currently seeking researchers from computer science,
+            mathematics, finance and biotech
+          </div>
         </div>
         <div style={styles.bottom_section_cta_container}>
           <a

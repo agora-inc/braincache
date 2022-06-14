@@ -130,7 +130,6 @@ const HomePage = () => {
           "Finding a world-class expert has never been easier",
           "Sign up now to get early access",
         ]}
-        cta_action={toggleModal}
       />
       <div style={styles.section_container}>
         <div style={styles.center_elements}>
