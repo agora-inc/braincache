@@ -19,8 +19,8 @@ const IconValueItem = (props: IconValueItemProps) => {
         </div>
       </div>
       <div>
-        {props.description.map((d: string) => (
-          <p style={styles.desc}>{d}</p>
+        {props.description.map((d: string, key: number) => (
+          <p key={key} style={styles.desc}>{d}</p>
         ))}
       </div>
     </div>

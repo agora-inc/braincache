@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useResponsiveContextData } from '../contexts/ResponsiveContext'
+
 import Hero from "../Components/LandingPages/Hero";
 import IconValueGrid from "../Components/LandingPages/IconValueGrid";
 import { rowPadding } from "../dimensions";
@@ -31,7 +33,6 @@ const styles = {
     height: "auto",
   },
   bottom_section: {
-    flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
     padding: `${2 * rowPadding}px ${rowPadding}px`,
@@ -95,6 +96,10 @@ const dummy_data = [
 ];
 
 const ExpertLandingPage = () => {
+
+  const { width } = useResponsiveContextData()
+  // console.log(width);
+
   return (
     <div style={{ width: "100%" }}>
       <Hero
@@ -114,7 +119,7 @@ const ExpertLandingPage = () => {
         </div>
         <IconValueGrid items={dummy_data} />
       </div>
-      <div style={styles.bottom_section}>
+      <div style={{...styles.bottom_section, ...{flexDirection: (width < 768) ? "column" : "row"}}}>
         <div style={styles.bottom_section_text}>
           <div>
             Are you an academic in a STEM field* that wants to explore the world
