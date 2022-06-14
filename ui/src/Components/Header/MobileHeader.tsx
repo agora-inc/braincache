@@ -27,10 +27,10 @@ const MobileHeader = () => {
       </div>
       <div style={{ ...styles.mobile_navbar, ...open_menu }}>
         <nav>
-          <Link style={styles.mobile_links} to="/">
+          <Link style={styles.mobile_links} to="/" onClick={() => setOpen(false) }>
             Companies
           </Link>
-          <Link style={styles.mobile_links} to="/experts">
+          <Link style={styles.mobile_links} to="/experts" onClick={() => setOpen(false) }>
             Experts
           </Link>
         </nav>

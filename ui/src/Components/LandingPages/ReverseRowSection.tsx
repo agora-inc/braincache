@@ -48,7 +48,7 @@ const inner_container = {
 
 const row = {
   alignItems: "center",
-  padding: "40px 0"
+  padding: "40px 20px"
 }  as const;
 
 const row_item = {

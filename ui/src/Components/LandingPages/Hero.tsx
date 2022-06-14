@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useResponsiveContextData } from '../../contexts/ResponsiveContext'
+
 interface Props {
   image: string;
   main_text: string;
@@ -8,6 +10,20 @@ interface Props {
 }
 
 const Hero = (props: Props) => {
+
+  const { width } = useResponsiveContextData()
+
+  const container_height = (width < 960) ? {minHeight: "600px"} : {minHeight: "750px"}
+
+  const hero_title = (width < 480) ? 3 :
+                        (width < 680) ? 4 :
+                          (width < 992) ? 5 : 6;
+
+  const hero_title_style = {
+    fontSize: hero_title + "rem",
+    lineHeight: (hero_title+1) + "rem"
+  };
+
   const hero_bg = {
     backgroundImage: `url(${props.image})`,
     backgroundSize: "cover",
@@ -17,21 +33,23 @@ const Hero = (props: Props) => {
   };
 
   return (
-    <div style={{ ...styles.hero_container, ...hero_bg }}>
-      <div style={styles.hero_section}>
-        <div style={styles.hero_content}>
-          <h1 style={styles.hero_title}>{props.main_text}</h1>
-          <div style={styles.hero_selling_points}>
-            {props.selling_points.map((sp: string) => (
-              <p style={styles.hero_selling_point}>{sp}</p>
-            ))}
+    <div style={{ ...styles.hero_container, ...hero_bg, ...container_height }}>
+      <div style={{padding: "0 40px"}}>
+        <div style={styles.hero_section}>
+          <div style={styles.hero_content}>
+            <h1 style={{...styles.hero_title, ...hero_title_style}}>{props.main_text}</h1>
+            <div style={styles.hero_selling_points}>
+              {props.selling_points.map((sp: string) => (
+                <p style={styles.hero_selling_point}>{sp}</p>
+              ))}
+            </div>
+            <a
+              style={styles.hero_cta}
+              href="https://airtable.com/shrhGt0giRGAY3yxA"
+            >
+              Join waitlist
+            </a>
           </div>
-          <a
-            style={styles.hero_cta}
-            href="https://airtable.com/shrhGt0giRGAY3yxA"
-          >
-            Join waitlist
-          </a>
         </div>
       </div>
     </div>
@@ -41,13 +59,14 @@ const Hero = (props: Props) => {
 const styles = {
   hero_container: {
     minHeight: "750px",
-    backgroundColor: "purple",
+    // backgroundColor: "purple",
     justifyContent: "flex-end",
     alignItems: "center",
     // paddingBottom: "50px",
   },
   hero_section: {
     maxWidth: "1200px",
+    // padding: "0 20px",
     width: "100%",
   },
   hero_content: {

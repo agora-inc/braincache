@@ -90,8 +90,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#1782b6",
-    paddingTop: 25,
-    paddingBottom: 25,
+    padding: "25px 20px"
   },
   inner_footer: {
     maxWidth: "1300px",

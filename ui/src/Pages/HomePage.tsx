@@ -95,9 +95,9 @@ const HomePage = () => {
     <div style={styles.perks_row}>
       <h3>Ready to start?</h3>
       <p>Sign up to our waitlist to be the first to use out platform</p>
-      <button style={styles.row_button} onClick={(e) => console.log(e)}>
+      <a style={styles.row_button} href={"https://airtable.com/shrhGt0giRGAY3yxA"}>
         Join waitlist
-      </button>
+      </a>
     </div>
   );
 
@@ -129,7 +129,7 @@ const HomePage = () => {
       </Modal>
       <Hero
         image={hero_bg}
-        main_text="Connecting high-impact businesses to relevant experts in academia"
+        main_text="Connecting businesses to experts in academia"
         selling_points={[
           "Finding a world-class expert has never been easier",
           "Sign up now to get early access",
@@ -155,11 +155,11 @@ const HomePage = () => {
         leftPosition={"center"}
       />
       <StripRow bg_img={strip_bg}>
-        <h1 style={styles.strip_header}>Hello World</h1>
+        <h1 style={styles.strip_header}>Are you an academic?</h1>
         <p style={styles.strip_subheader}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          Explore the world of microconsulting where you can get paid to work on fascinating problems with some of the best companies and startups.
         </p>
-        <button style={styles.strip_action}>Find an Expert</button>
+        <a style={styles.strip_action} href={"/experts"}>Find an Expert</a>
       </StripRow>
     </div>
   );
@@ -200,7 +200,10 @@ const styles = {
     fontSize: "1.5rem",
     borderRadius: "5px",
     border: "none",
-    color: "#006ab1",
+    color: "#fff",
+    background: "#006ab1",
+    textDecoration: "none",
+    textAlign: "center",
     cursor: "pointer",
   },
   strip_header: {
@@ -212,8 +215,9 @@ const styles = {
     fontSize: 15,
     color: "#fff",
     marginBottom: 25,
-    maxWidth: 300,
+    maxWidth: 420,
     textAlign: "center",
+    lineHeight: 1.5,
   },
   strip_action: {
     background: "#fff",
